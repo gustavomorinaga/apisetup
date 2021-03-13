@@ -15,10 +15,9 @@
 			"module-resolver",
 			{
 				"alias": {
-					"@config": "./src/config",
+					"@configs": "./src/configs",
 					"@models": "./src/models",
-					"@controllers": "./src/controllers",
-					"@views": "./src/views"
+					"@controllers": "./src/controllers"
 				}
 			}
 		]

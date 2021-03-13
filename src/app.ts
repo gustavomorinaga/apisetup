@@ -1,7 +1,8 @@
 import express from 'express';
 import cors from 'cors';
-import mongoose from 'mongoose';
 // import routes from './routes';
+import { DatabaseConnection } from '@configs/databaseConnection';
+import logger from './logger';
 
 class App {
 	public express: express.Application;
@@ -9,7 +10,7 @@ class App {
 	public constructor() {
 		this.express = express();
 		this.middleware();
-		// this.database();
+		this.database();
 		// this.routes();
 	}
 
@@ -19,9 +20,13 @@ class App {
 	}
 
 	private database(): void {
-		mongoose.connect('', {
-			useNewUrlParser: true,
-		});
+		try {
+			DatabaseConnection.connect();
+
+			logger.info('MongoDB Connected!');
+		} catch (error) {
+			logger.error(error);
+		}
 	}
 
 	// private routes(): void {

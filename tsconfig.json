@@ -16,6 +16,7 @@
 		"forceConsistentCasingInFileNames": true,
 		"noImplicitAny": true,
 		"paths": {
+			"@configs/*": ["./src/configs/*"],
 			"@controllers/*": ["./src/controllers/*"],
 			"@models/*": ["./src/models/*"],
 			"@schemas/*": ["./src/schemas/*"]
