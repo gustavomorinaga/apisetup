@@ -14,7 +14,12 @@
 		"experimentalDecorators": true,
 		"emitDecoratorMetadata": true,
 		"forceConsistentCasingInFileNames": true,
-		"noImplicitAny": true
+		"noImplicitAny": true,
+		"paths": {
+			"@controllers/*": ["./src/controllers/*"],
+			"@models/*": ["./src/models/*"],
+			"@schemas/*": ["./src/schemas/*"]
+		}
 	},
 	"include": ["src"]
 }
