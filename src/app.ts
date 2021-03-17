@@ -1,7 +1,7 @@
 import express from 'express';
 import cors from 'cors';
-// import routes from './routes';
 import { DatabaseConnection } from '@configs/databaseConnection';
+import helloRoute from '@routes/hello';
 import logger from './logger';
 
 class App {
@@ -11,7 +11,7 @@ class App {
 		this.express = express();
 		this.middleware();
 		this.database();
-		// this.routes();
+		this.routes();
 	}
 
 	private middleware(): void {
@@ -29,9 +29,9 @@ class App {
 		}
 	}
 
-	// private routes(): void {
-	// 	this.express.use(routes);
-	// }
+	private routes(): void {
+		this.express.use('/hello', helloRoute);
+	}
 }
 
 export default new App().express;

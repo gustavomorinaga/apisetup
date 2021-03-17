@@ -16,8 +16,9 @@
 			{
 				"alias": {
 					"@configs": "./src/configs",
+					"@controllers": "./src/controllers",
 					"@models": "./src/models",
-					"@controllers": "./src/controllers"
+					"@routes": "./src/routes"
 				}
 			}
 		]

@@ -19,7 +19,7 @@
 			"@configs/*": ["./src/configs/*"],
 			"@controllers/*": ["./src/controllers/*"],
 			"@models/*": ["./src/models/*"],
-			"@schemas/*": ["./src/schemas/*"]
+			"@routes/*": ["./src/routes/*"]
 		}
 	},
 	"include": ["src"]
